@@ -1,7 +1,7 @@
 const particlesConfig = {
   background: {
     color: {
-      value: "#1d1d1d",
+      value: "#FFFFFF",
     },
   },
   fpsLimit: 120,
@@ -29,10 +29,10 @@ const particlesConfig = {
   },
   particles: {
     color: {
-      value: "#ffffff",
+      value: "#000000",
     },
     links: {
-      color: "#ffffff",
+      color: "#000000",
       distance: 150,
       enable: true,
       opacity: 0.5,
