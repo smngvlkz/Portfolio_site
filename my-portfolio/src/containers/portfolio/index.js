@@ -46,6 +46,11 @@ const Portfolio = () => {
   function handleHover(index) {
     setHoveredValue(index);
   }
+
+  function handleVisit(link) {
+    window.open(link, "_blank");
+  }
+
   return (
     <section id="portfolio" className="portfolio">
       <PageHeaderContent
@@ -75,7 +80,9 @@ const Portfolio = () => {
                 {index === hoveredValue && (
                   <div>
                     <p>{item.name}</p>
-                    <button>Visit</button>
+                    <button onClick={() => handleVisit(item.link)}>
+                      Visit
+                    </button>
                   </div>
                 )}
               </div>
