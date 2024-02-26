@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { BsInfoCircleFill } from "react-icons/bs";
 import PageHeaderContent from "../../components/PageHeader";
 import { Animate } from "react-simple-animate";
 import "./styles.scss";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        () => {
+          console.log("Message sent!");
+          window.alert("Message sent!");
+        },
+        (error) => {
+          console.log("Failed to send...", error.text);
+          window.alert("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
     <section id="contact" className="contact">
       <PageHeaderContent
@@ -36,45 +61,49 @@ const Contact = () => {
             transform: "translateX(0px)",
           }}
         >
-          <div className="contact__content__form">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="contact__content__form"
+          >
             <div className="contact__content__form__controlswrapper">
               <div>
                 <input
                   required
-                  name="name"
+                  name="user_name"
                   className="inputName"
                   type={"text"}
                 />
-                <label htmlFor="name" className="nameLabel">
+                <label htmlFor="user_name" className="nameLabel">
                   Name
                 </label>
               </div>
               <div>
                 <input
                   required
-                  name="email"
+                  name="user_email"
                   className="inputEmail"
                   type={"text"}
                 />
-                <label htmlFor="email" className="emailLabel">
+                <label htmlFor="user_email" className="emailLabel">
                   Email
                 </label>
               </div>
               <div>
                 <textarea
                   required
-                  name="description"
+                  name="message"
                   className="inputDescription"
                   type={"text"}
                   rows="5"
                 />
-                <label htmlFor="description" className="descriptionLabel">
+                <label htmlFor="message" className="descriptionLabel">
                   Description
                 </label>
               </div>
             </div>
-            <button>Submit</button>
-          </div>
+            <input type="submit" value="Submit" />
+          </form>
         </Animate>
       </div>
     </section>

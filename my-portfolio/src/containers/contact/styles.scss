@@ -85,21 +85,21 @@
           }
         }
       }
-    }
 
-    button {
-      cursor: pointer;
-      padding: 10px 70px;
-      font-size: 2rem;
-      background: transparent;
-      color: var(--blue-theme-main-color);
-      border: 1.5px solid var(--blue-theme-main-color);
-      border-radius: 4px;
-      font-weight: 500;
+      input[type="submit"] {
+        cursor: pointer;
+        padding: 10px 70px;
+        font-size: 2rem;
+        background: transparent;
+        color: var(--blue-theme-main-color);
+        border: 1.5px solid var(--blue-theme-main-color);
+        border-radius: 4px;
+        font-weight: 500;
 
-      &:hover {
-        color: #ffffff;
-        background-color: var(--blue-theme-main-color);
+        &:hover {
+          color: #ffffff;
+          background-color: var(--blue-theme-main-color);
+        }
       }
     }
   }
