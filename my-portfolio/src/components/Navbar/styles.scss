@@ -45,9 +45,10 @@
         }
 
         &__links {
-          color: var(--blue-theme-main-color);
+          color: var(--blue-theme-sub-text-color); // Change color to white
           text-decoration: none;
           padding: 0.5rem;
+          pointer-events: auto; // Ensure the links are clickable
         }
       }
     }
@@ -58,60 +59,41 @@
   display: none;
 }
 
+//* Making the mobile view navbar have the oposite background color to the link text from the desktop one  *//
 @media only screen and (max-width: 768px) {
   .navbar__container__menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 80px;
     left: -110%;
     opacity: 1;
     transition: all 0.5s ease;
+    z-index: 1000;
 
     &.active {
-      background: #181818;
+      background: var(--blue-theme-main-color);
       left: 0px;
       opacity: 1;
     }
 
     &__item {
-      border-bottom: 1px solid #282828;
+      border-bottom: 1px solid var(--blue-theme-nav-background-color);
       margin: 0px;
       padding: 20px 0px;
-    }
-  }
 
-  .nav-icon {
-    display: block;
-    cursor: pointer;
-    color: var(--yellow-theme-main-color);
-    padding-right: 20px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .navbar__container__menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
-    top: 80px;
-    left: -110%;
-    opacity: 1;
-    transition: all 0.5s ease;
+      &__links {
+        color: var(--blue-theme-nav-background-color);
+        text-decoration: none;
+        padding: 0.5rem;
+        pointer-events: auto;
 
-    &.active {
-      background: #181818;
-      left: 0px;
-      opacity: 1;
-    }
-
-    &__item {
-      border-bottom: 1px solid #282828;
-      margin: 0px;
-      padding: 20px 0px;
+        &:hover {
+          color: var(--blue-theme-nav-background-color);
+        }
+      }
     }
   }
 
@@ -121,4 +103,12 @@
     color: var(--blue-theme-main-color);
     padding-right: 20px;
   }
+}
+
+body.menu-open {
+  pointer-events: none;
+}
+
+.navbar__container__menu {
+  pointer-events: auto;
 }

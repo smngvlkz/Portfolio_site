@@ -3,6 +3,7 @@ import { FaBars, FaReact } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import "./styles.scss";
+
 const data = [
   {
     label: "HOME",
@@ -35,7 +36,18 @@ const Navbar = () => {
 
   const handleToggleIcon = () => {
     setToggleIcon(!toggleIcon);
+    if (!toggleIcon) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
   };
+
+  const closeMenu = () => {
+    setToggleIcon(false);
+    document.body.classList.remove("menu-open");
+  };
+
   return (
     <div>
       <nav className="navbar">
@@ -52,6 +64,7 @@ const Navbar = () => {
               <Link
                 className="navbar__container__menu__item__links"
                 to={item.to}
+                onClick={closeMenu}
               >
                 {item.label}
               </Link>
