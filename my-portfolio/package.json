@@ -47,10 +47,13 @@
     ]
   },
   "vercel": {
-    "rewrites": [
+    "routes": [
       {
-        "source": "/(.*)",
-        "destination": "/"
+        "handle": "filesystem"
+      },
+      {
+        "src": "/.*",
+        "dest": "/index.html"
       }
     ]
   }
