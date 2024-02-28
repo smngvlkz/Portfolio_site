@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { BsInfoCircleFill } from "react-icons/bs";
+import { BsEnvelope } from "react-icons/bs";
 import PageHeaderContent from "../../components/PageHeader";
 import { Animate } from "react-simple-animate";
 import "./styles.scss";
@@ -19,22 +19,23 @@ const Contact = () => {
         process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then(
-        () => {
-          console.log("Message sent!");
+        (result) => {
+          console.log(result.text);
           window.alert("Message sent!");
         },
         (error) => {
-          console.log("Failed to send...", error.text);
+          console.log(error.text);
           window.alert("Failed to send message. Please try again.");
         }
       );
+    e.target.reset();
   };
 
   return (
     <section id="contact" className="contact">
       <PageHeaderContent
         headerText="My Contact"
-        icon={<BsInfoCircleFill size={40} />}
+        icon={<BsEnvelope size={40} />}
       />
       <div className="contact__content">
         <Animate

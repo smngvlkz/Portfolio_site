@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsInfoCircleFill } from "react-icons/bs";
+import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import PageHeaderContent from "../../components/PageHeader";
 import CMSHomePage from "../../images/CMSHomePage.png";
 import EcommerceHomePage from "../../images/EcommerceHomePage.png";
@@ -55,7 +55,7 @@ const Portfolio = () => {
     <section id="portfolio" className="portfolio">
       <PageHeaderContent
         headerText="My Portfolio"
-        icon={<BsInfoCircleFill size={40} />}
+        icon={<BsFillGrid3X3GapFill size={40} />}
       />
       <div className="portfolio__content">
         <ul className="portfolio__content__filter">

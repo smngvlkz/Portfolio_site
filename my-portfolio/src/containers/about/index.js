@@ -1,5 +1,5 @@
 import React from "react";
-import { BsInfoCircleFill } from "react-icons/bs";
+import { BsFillPersonFill } from "react-icons/bs";
 import PageHeaderContent from "../../components/PageHeader";
 import { Animate } from "react-simple-animate";
 import "./styles.scss";
@@ -17,7 +17,7 @@ const personalDetails = [
   },
   {
     label: "Location",
-    value: "Durban, RSA",
+    value: "KZN, RSA",
   },
   {
     label: "Email",
@@ -30,13 +30,13 @@ const personalDetails = [
 ];
 
 const jobSummary =
-  "Software Engineer with 10 years of experience in consultant and administration roles where I honed my skills in communication, problem-solving, and teamwork. A strong passion for learning and development made me a lifelong software developer, always seeking to learn and improve my skills. I take great pleasure in creating user-friendly and scalable products that solve real-world problems and add value to the users..";
+  "Junior Full Stack Engineer with 10 years of experience in consultant and administration roles where I honed my skills in communication, problem-solving, and teamwork. A strong passion for learning and development made me a lifelong software developer, always seeking to learn and improve my skills. I take great pleasure in creating user-friendly and scalable products that solve real-world problems and add value to the users..";
 const About = () => {
   return (
     <section id="about" className="about">
       <PageHeaderContent
         headerText="About Me"
-        icon={<BsInfoCircleFill size={40} />}
+        icon={<BsFillPersonFill size={40} />}
       />
 
       <div className="about__content">
