@@ -2,6 +2,8 @@
 
 This is a portfolio site that aims to showcase some of my projects as a junior full stack developer. It was built using HTML, SCSS/CSS, and Javascript. It also uses the Github API to fetch and display github repositories.
 
+I will never stop improving this site as I want it to get better, from responsiveness to the core user experience. I want it to be a reflection of my growth and skill with time.
+
 You can view the live version of the site here - https://smngvlkz.netlify.app/
 
 ## Overview
