@@ -1,16 +1,11 @@
-# My Portfolio Site. 
+# My Portfolio Site
 
-This is a portfolio site that aims to showcase some of my projects as a junior full stack developer. It was built using HTML, SCSS/CSS, and Javascript. It also uses the Github API to fetch and display github repositories.
+This is a portfolio site that showcases some of my projects as a junior full-stack developer. It was built using HTML, SCSS/CSS, and JavaScript, and uses the GitHub API to fetch and display GitHub repositories. I will continually improve this site to ensure that it is responsive and offers an excellent user experience. I want it to reflect my growth and skills over time.
 
-I will never stop improving this site as I want it to get better, from responsiveness to the core user experience. I want it to be a reflection of my growth and skill with time.
-
-You can view the live version of the site here - https://smngvlkz.netlify.app/
+You can view the live version of the site here: https://smngvlkz.netlify.app/
 
 ## Overview
 
-I structed the site especially the projects page to redirect directly to each specific Github repo so that anyone who is interested in viewing them first see how my code and all the documentation related to the project.
-Of course each project that is included in the site is live and has it own URL in its specific repo, but I specifically chose to redirect to Github soley because I want to showcase my code first before you experience the app.
+I structured the site, especially the projects page, to link directly to each specific GitHub repository so that anyone interested in viewing them can see my code and all related documentation first. While each project included in the site is live and has its own URL in its corresponding repository, I chose to redirect to GitHub to showcase my code before allowing users to experience the app. I will add more projects to the site in the future and remove some as I become better at my job.
 
-I will include more projects in the future and some I will also remove as I get better and better at my job.
-
-I am always open to new opportunities and collaborations. 
+I am always open to new opportunities and collaborations.
