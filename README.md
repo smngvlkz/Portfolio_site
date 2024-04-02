@@ -6,4 +6,6 @@ This is a portfolio site that showcases some of my projects as a junior full-sta
 
 I structured the site, especially the projects page, to link directly to each specific GitHub repository so that anyone interested in viewing them can see my code and all related documentation first. While each project included in the site is live and has its own URL in its corresponding repository, I chose to redirect to GitHub to showcase my code before allowing users to experience the app. I will add more projects to the site in the future and remove some as I become better at my job.
 
-I am always open to new opportunities and collaborations.
+I am always open to new opportunities and collaborations. I want to include more open-source projects too. 
+
+The more I build, the better.
