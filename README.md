@@ -8,4 +8,4 @@ I structured the site, especially the projects page, to link directly to each sp
 
 I am always open to new opportunities and collaborations. I want to include more open-source projects too. 
 
-The more I build, the better.
+The more I build, the better. I won't stop updating at all.
